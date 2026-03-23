@@ -118,7 +118,9 @@ export default function RunSequence({
   return (
     <div
       style={{
+        minWidth: "220px",
         width: "300px",
+        flexShrink: 1,
         background: "#f7f7f7",
         borderLeft: "1px solid #ccc",
         padding: "20px",
@@ -128,7 +130,7 @@ export default function RunSequence({
         top: 0,
       }}
     >
-      <h3>📋 Run Sequence</h3>
+      <h3>Run Sequence</h3>
       <ol style={{ paddingLeft: 20 }}>
         {wrappedSequence.map((test, i) => (
           <li key={i} style={{ marginBottom: "8px" }}>

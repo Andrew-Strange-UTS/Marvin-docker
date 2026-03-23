@@ -160,8 +160,13 @@ async function main() {
         console.log("Running step #" + (i + 1) + " [" + testName + "]");
         await fn(driver, testParams, zephyrLog);
         console.log("Passed step #" + (i + 1) + " [" + testName + "]");
-        passedCount++;
-        await sendZephyrResult(zephyrConfig, "Pass", zephyrStepResults);
+        const hasFailedZephyrStep = zephyrStepResults.some(function(r) { return r.statusName === "Fail"; });
+        if (hasFailedZephyrStep) {
+          failedCount++;
+        } else {
+          passedCount++;
+        }
+        await sendZephyrResult(zephyrConfig, hasFailedZephyrStep ? "Fail" : "Pass", zephyrStepResults);
       } catch (stepError) {
         failedCount++;
         console.error("Failed step #" + (i + 1) + " [" + testName + "]:", stepError && stepError.stack || stepError);
