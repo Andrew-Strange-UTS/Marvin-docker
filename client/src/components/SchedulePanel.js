@@ -365,7 +365,7 @@ export default function SchedulePanel({ sequencePayload, stepNames }) {
           style={{
             padding: "8px 16px",
             fontSize: "14px",
-            backgroundColor: "#2563eb",
+            backgroundColor: "#7c3aed",
             color: "white",
             border: "none",
             borderRadius: "5px",

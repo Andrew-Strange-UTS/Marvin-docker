@@ -319,7 +319,7 @@ export default function HomePage() {
 
   return (
     <div style={{ display: "flex" }}>
-      <div style={{ flex: 1, padding: "20px" }}>
+      <div style={{ flex: 1, minWidth: 0, padding: "20px", overflow: "hidden" }}>
         <h1 style={{ textAlign: "center" }}>UTS Automation UI</h1>
         <div
           style={{
@@ -395,7 +395,7 @@ export default function HomePage() {
         {/* Logs Viewer */}
         <div
           style={{
-            width: "1400px",
+            width: "100%", maxWidth: "1400px",
             margin: "30px auto",
             backgroundColor: "#fafafa",
             borderRadius: "10px",
@@ -499,7 +499,7 @@ export default function HomePage() {
           <>
             <div
               style={{
-                width: "1400px",
+                width: "100%", maxWidth: "1400px",
                 margin: "40px auto 0",
                 backgroundColor: "#7c3aed",
                 color: "white",
