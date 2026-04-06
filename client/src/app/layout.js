@@ -1,7 +1,7 @@
 //client/src/app/layout.js
 export const metadata = {
-    title: 'UTS Automation UI',
-    description: 'Run and manage Selenium tests from UI',
+    title: 'Marvin',
+    description: 'Marvin — Web Test Automation',
   };
   
   export default function RootLayout({ children }) {

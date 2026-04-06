@@ -2,6 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import { BACKEND_URL } from "@/config";
+import theme from "@/theme";
 
 export default function RunSequence({
   sequence,
@@ -139,7 +140,7 @@ export default function RunSequence({
               <span style={{ marginLeft: "6px" }} title="Zephyr Scale enabled">🚩</span>
             )}
             {test.visualBrowser && (
-              <span style={{ color: "#7c3aed", marginLeft: "6px" }}>👁</span>
+              <span style={{ color: theme.primary, marginLeft: "6px" }}>👁</span>
             )}
           </li>
         ))}
@@ -151,7 +152,7 @@ export default function RunSequence({
           style={{
             marginTop: "20px",
             padding: "10px 15px",
-            background: isRunning ? "#aaa" : "#7c3aed",
+            background: isRunning ? "#aaa" : theme.primary,
             color: "white",
             border: "none",
             borderRadius: "5px",

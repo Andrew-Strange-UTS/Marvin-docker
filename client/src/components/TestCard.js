@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import theme from "@/theme";
 
 export default function TestCard({
   name,
@@ -186,11 +187,11 @@ export default function TestCard({
       <div style={{
         marginTop: "20px",
         padding: "14px 18px",
-        background: "#f8f5ff",
+        background: theme.primaryLight,
         borderRadius: "8px",
-        border: "1px solid #e0d4f5",
+        border: `1px solid ${theme.primaryBorder}`,
       }}>
-        <h4 style={{ marginBottom: "10px", color: "#7c3aed" }}>Zephyr Scale</h4>
+        <h4 style={{ marginBottom: "10px", color: theme.primary }}>Zephyr Scale</h4>
         <div style={{ display: "flex", gap: "12px" }}>
           <div style={{ flex: 1 }}>
             <label style={{ display: "block", fontWeight: "bold", fontSize: "13px", marginBottom: "4px" }}>Project Key</label>
@@ -231,8 +232,8 @@ export default function TestCard({
             onClick={toggleRun}
             style={{
               padding: "10px 15px",
-              background: "#7c3aed",
-              color: "white",
+              background: theme.primary,
+              color: theme.primaryText,
               border: "none",
               borderRadius: "5px",
               width: "200px",
@@ -249,8 +250,8 @@ export default function TestCard({
             onClick={toggleMeta}
             style={{
               padding: "10px 15px",
-              background: "#7c3aed",
-              color: "white",
+              background: theme.primary,
+              color: theme.primaryText,
               border: "none",
               borderRadius: "5px",
               width: "200px",
