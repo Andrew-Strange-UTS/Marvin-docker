@@ -1,4 +1,4 @@
-# UTS Automation UI v2
+# Marvin
 
 A Docker-based Selenium test automation platform with a Next.js frontend. Clone a GitHub test repo (public or private), view and configure tests, build run sequences with OKTA login wrapping, and report results to Zephyr Scale — all from a browser UI.
 
@@ -17,7 +17,7 @@ docker compose up --build
 
 Ports are configurable in `.env`.
 
-## What's New in v2
+## Features
 
 ### Zephyr Scale Integration
 Tests can report results directly to Zephyr Scale. For each test card you can set:
@@ -62,7 +62,7 @@ Schedule sequences to run automatically on specific days and times. When you cre
 - Schedule data is persisted in a Docker volume (`schedules-data`)
 
 ### Export / Import Schedules
-Scheduled sequences can be exported as encrypted `.utsb` files and imported on another machine running UTS Automation UI.
+Scheduled sequences can be exported as encrypted `.utsb` files and imported on another machine running Marvin.
 
 - **Export**: Click "Export" on a schedule card, enter an encryption password, and download the `.utsb` file
 - **Import**: Click "Import Schedule", select a `.utsb` file, enter the decryption password
@@ -108,7 +108,7 @@ Secrets and schedule data are persisted in named Docker volumes (`secrets-data`,
 ## Project Structure
 
 ```
-UTS-automation-UI/
+Marvin-docker/
 ├── client/                          # Next.js frontend
 │   ├── src/
 │   │   ├── app/
